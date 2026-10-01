@@ -11,11 +11,11 @@ export const list = (req, res) => {
   res.json(result);
 };
 
-export const get = app.get("/:id", (req, res) => {
+export const get = (req, res) => {
   res.send(req.params.id);
-});
+};
 
-export const create = app.post("/", (req, res) => {
+export const create = (req, res) => {
   let message = {
     user: "John Doe",
     text: "Hello, gangstah!",
@@ -29,4 +29,4 @@ export const create = app.post("/", (req, res) => {
   };
 
   res.json(result);
-});
+};
