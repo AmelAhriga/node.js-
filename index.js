@@ -4,6 +4,10 @@ import messagesRouter from "./routes/api/v1/messages.js";
 const app = express();
 const port = 3000;
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.use("/api/v1/messages", messagesRouter);
 
 app.listen(port, () => {
